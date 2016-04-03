@@ -54,7 +54,7 @@ class DataGuy:
         self.clock_after = time.clock()
 
     def generate_newdata_list(self):
-        self.new_data = [self.points, self.time_stamp, self.clock_diff, self.level, self.game]
+        self.new_data = [self.points, self.user, self.time_stamp, self.clock_diff, self.level, self.game]
 
     def generate_sorted_highscore(self):
         """ Function gets data from level_history which has
