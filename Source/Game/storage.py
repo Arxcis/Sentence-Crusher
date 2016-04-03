@@ -63,9 +63,6 @@ if __name__ == "__main__":
 
     new = {'Bottom line': ['0', 'trololol']}
 
-    for level in range(1, 5):
-        storage.write_to_file(new, level)
-
     for level in range (1, 5):
         cache = storage.read_from_file(level)
         print(cache)

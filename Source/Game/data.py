@@ -54,7 +54,9 @@ class DataGuy:
         self.clock_after = time.clock()
 
     def generate_newdata_list(self):
-        self.new_data = [self.points, self.user, self.time_stamp, self.clock_diff, self.level, self.game]
+        self.new_data = [str(self.points), self.user, 
+                         str(self.time_stamp), str(self.clock_diff), 
+                         str(self.level), self.game]
 
     def generate_sorted_highscore(self):
         """ Function gets data from level_history which has
@@ -66,7 +68,8 @@ class DataGuy:
         history = self.level_history
         liste = []
         for key in history:                      # Key = username
-            liste.append([key, history[key][0]]) # Index 0 = points 
+            liste.append([key, history[key][0]])   # Index 0 = points 
+
 
         sorted_list = sorted(liste, key=lambda item: item[1], reverse=True)
 
