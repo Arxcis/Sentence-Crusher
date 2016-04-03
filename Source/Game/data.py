@@ -41,7 +41,7 @@ class DataGuy:
         print("Data has been reset")
 
     def get_level_history(self, storage):
-        storage.read_from_file(self)
+        self.level_history = storage.read_from_file(self.level)
         self.generate_sorted_highscore()
 
     def get_datetime(self):

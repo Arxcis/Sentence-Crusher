@@ -72,9 +72,12 @@ class GfxGuy:
         highscores = data.sorted_highscorelist
 
         for pair in highscores:
-            formatted = "   ".join(pair)
-            print("    " + formatted)
-            time.sleep(0.1)
+            if pair[0] == 'Bottom line':
+                pass
+            else:
+                formatted = "   ".join(pair)
+                print("    " + formatted)
+                time.sleep(0.1)
 
         print(' ========================== \n'
               '                              ')
